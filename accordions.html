@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .acc {
+      border: 2px solid;
+      margin: 1rem 0;
+      padding: 1rem;
+    }
+
+    .acc p {
+      display: none;
+    }
+
+    .acc h1 {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="accordion">
+      <div class="acc">
+        <h1>
+          <span>Heading 1</span>
+          <i class="fa-solid fa-square-plus"></i>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam nostrum dolores tempora obcaecati.
+          Animi, explicabo suscipit! Quos deleniti nostrum sunt ab minima alias fugiat provident laudantium eos, sit
+          aspernatur?
+          Tempore quis animi possimus facilis vel tenetur veritatis delectus maiores accusamus quia quisquam nisi
+          debitis, voluptatem perspiciatis exercitationem provident, eveniet corrupti ex dolor quae atque temporibus,
+          deserunt molestiae! Quod, quisquam?</p>
+      </div>
+
+      <div class="acc">
+        <h1><span>Heading 2</span><i class="fa-solid fa-square-plus"></i></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam nostrum dolores tempora obcaecati.
+          Animi, explicabo suscipit! Quos deleniti nostrum sunt ab minima alias fugiat provident laudantium eos, sit
+          aspernatur?
+          Tempore quis animi possimus facilis vel tenetur veritatis delectus maiores accusamus quia quisquam nisi
+          debitis, voluptatem perspiciatis exercitationem provident, eveniet corrupti ex dolor quae atque temporibus,
+          deserunt molestiae! Quod, quisquam?</p>
+      </div>
+
+      <div class="acc">
+        <h1><span>Heading 3</span><i class="fa-solid fa-square-plus"></i></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam nostrum dolores tempora obcaecati.
+          Animi, explicabo suscipit! Quos deleniti nostrum sunt ab minima alias fugiat provident laudantium eos, sit
+          aspernatur?
+          Tempore quis animi possimus facilis vel tenetur veritatis delectus maiores accusamus quia quisquam nisi
+          debitis, voluptatem perspiciatis exercitationem provident, eveniet corrupti ex dolor quae atque temporibus,
+          deserunt molestiae! Quod, quisquam?</p>
+      </div>
+
+      <div class="acc">
+        <h1><span>Heading 4</span><i class="fa-solid fa-square-plus"></i></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam nostrum dolores tempora obcaecati.
+          Animi, explicabo suscipit! Quos deleniti nostrum sunt ab minima alias fugiat provident laudantium eos, sit
+          aspernatur?
+          Tempore quis animi possimus facilis vel tenetur veritatis delectus maiores accusamus quia quisquam nisi
+          debitis, voluptatem perspiciatis exercitationem provident, eveniet corrupti ex dolor quae atque temporibus,
+          deserunt molestiae! Quod, quisquam?</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+
+    // let headings = document.querySelectorAll("h1")
+
+    // console.log(headings)
+    // headings.onclick = () => {
+    //   console.log("clicked")
+    // }
+
+    // for (let i = 0; i < headings.length; i++) {
+    //   headings[i].onclick = () => {
+    //     console.log("clicked")
+    //   }
+    // }
+
+    // getComputedStyle
+
+    // let icons = document.querySelectorAll(".acc h1 i")
+
+    // icons.forEach((icon) => {
+    //   icon.onclick = () => {
+    //     if(icon.parentElement.nextElementSibling.style.display === 'block'){
+    //       //close the opened para
+    //       icon.parentElement.nextElementSibling.style.display = 'none'
+    //       icon.classList.add('fa-square-plus');
+    //       icon.classList.remove('fa-square-minus');
+    //     }
+    //     else{
+    //       //check all para, close if any is found open
+    //       let para = document.querySelectorAll(".acc p")
+    //       para.forEach((p) => {
+    //         if(p.style.display === 'block'){
+    //           p.style.display = 'none';
+    //           p.previousElementSibling.children[1].classList.remove("fa-square-minus");
+    //           p.previousElementSibling.children[1].classList.add("fa-square-plus");
+    //         }
+    //       })
+
+    //       //open the closed para
+    //       icon.parentElement.nextElementSibling.style.display = 'block';
+    //       icon.classList.remove('fa-square-plus');
+    //       icon.classList.add('fa-square-minus');
+    //     }
+    //   }
+    // })
+
+
+
+    let icons = document.querySelectorAll(".acc h1 i")
+
+    icons.forEach((icon) => {
+      icon.onclick = () => {
+        if(icon.parentElement.nextElementSibling.classList.contains("show")){
+          //Close Para
+          icon.parentElement.nextElementSibling.style.display = "none";
+          icon.parentElement.nextElementSibling.classList.remove("show")
+
+          //Change - to +
+          icon.classList.add("fa-square-plus")
+          icon.classList.remove("fa-square-minus")
+        }
+        else{
+
+          //check other open para
+          let allPara = document.querySelectorAll(".acc p")
+          allPara.forEach((p) => {
+            if(p.classList.contains("show")){
+              p.classList.remove("show");
+              p.style.display = "none";
+            }
+          })
+
+
+          //Open Para
+          icon.parentElement.nextElementSibling.style.display = "block";
+          icon.parentElement.nextElementSibling.classList.add("show")
+
+          //Change + to -
+          icon.classList.remove("fa-square-plus")
+          icon.classList.add("fa-square-minus")
+        }
+      }
+    })
+
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>

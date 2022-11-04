@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Element</title>
+  <style>
+    form{
+      width: 300px;
+    }
+    .dynamicDiv{
+      position: relative;
+    }
+    .addHobby{
+      position: absolute;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- <button>Get Text</button> -->
+
+    <form action="">
+      <input type="text" placeholder="Name"><br>
+      <input type="email" placeholder="Email"><br>
+      <select name="" id="">
+        <option value="" selected disabled>Hometown</option>
+        <option value="jpr">Jaipur</option>
+        <option value="jodhpur">Jodhpur</option>
+        <option value="other">Other</option>
+      </select><br>
+      <input type="text" placeholder="Username"><br>
+      <input type="password" placeholder="Password"><br>
+      <input type="checkbox" name="working">Are you a working Professional? <br>
+
+      <div class="dynamicDiv">
+        <input type="text" placeholder="Enter your hobbies">
+        <button type="button" class="addHobby">+</button>
+      </div>
+      
+
+      <input type="submit" value="Register">
+    </form>
+
+
+  </div>
+  <script>
+    // const btn = document.querySelector("button")
+    // btn.onclick = () => {
+    //   let para = document.createElement("p");
+    //   para.innerHTML = "Hello JS"
+    //   document.querySelector("#wrapper").appendChild(para)
+    // }
+
+    // btn.onclick = () => {
+    //   let div = document.createElement("div")
+    //   div.classList.add("dynamicDiv")
+
+    //   for(let i=0;i<3;i++){
+    //     let para = document.createElement("p")
+    //     para.innerHTML = "Paragraph" + (i+1)
+    //     div.appendChild(para) 
+    //   }
+     
+    //   document.querySelector("#wrapper").appendChild(div)
+    // }
+
+
+    const hometown = document.querySelector("select")
+    let formChilds;
+
+    window.onload = () => {
+      formChildsLength = document.querySelector("form").children.length
+      console.log(formChildsLength)
+    }
+
+    hometown.onchange = () => {
+      if(hometown.value === "other"){
+        //add an input
+        const inp = document.createElement("input")
+        inp.setAttribute("placeholder", "Enter your hometown")
+        hometown.insertAdjacentElement('afterend', inp)
+      }
+      else{
+        const frm = document.querySelector("form")
+        //remove input - if present
+
+        if(frm.children.length > formChildsLength){
+          hometown.nextElementSibling.remove()
+        }
+      }
+    }
+
+    const working = document.querySelector("input[type=checkbox]")
+
+    working.onchange = () => {
+      if(working.checked === true){
+        console.log("Working")
+      }
+      else{
+        console.log("Student")
+      }
+    }
+
+
+
+
+
+    const addHobby = document.querySelector(".addHobby")
+    addHobby.onclick = (e) => {
+      e.preventDefault()
+      const clonedInput = addHobby.parentElement.children[0].cloneNode(true)
+      document.querySelector(".dynamicDiv").appendChild(clonedInput)
+    }
+
+
+
+  </script>
+</body>
+</html>

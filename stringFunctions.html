@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Functions</title>
+</head>
+<body>
+  <div id="wrapper">
+    <p></p>
+    <p></p>
+  </div>
+
+  <script>
+
+    // let str = "Javascript is Awesome"
+
+    // console.log(str.length);
+
+
+    // console.log(str.indexOf("i"))
+
+    // console.log(str.lastIndexOf("S")) //-1
+
+    // console.log(str.includes("Rohit"))
+
+
+    // console.log(str.replace("Javascript", "React"))
+
+    //FLAGS: /g, /i
+
+
+    //TO EXTRACT PART OF A STRING: slice, substring, substr
+    
+    //slice: when it takes 2 arguments: the last character is omitted
+    //slice: when it takes 1 argument: the whole string from that character is printed(including the last character)
+
+    //substring: if arguments are positive, substring is identical to slice. Difference is substring does not accept -ve arguments
+
+    //substr
+
+    // console.log(str.slice(11,13).length)
+
+    // console.log(str.slice(10))
+
+    let str = "Javascript is Awesome, and so is react & node"
+
+    // console.log(str.slice(-10, -15))
+
+    // console.log(str.substring(10))
+
+    console.log(str.substr(-20,15))
+
+
+    //charAt, match, test, split, toString, toLowerCase, toUpperCase, concat
+
+
+    //What is an array?
+    //push, pop, shift, unshift, splice, slice, join
+
+    //What is a 2D array?
+
+    // let para1 = document.querySelector("p:first-of-type")
+    // let para2 = document.querySelector("p:last-of-type")
+    // let output1 = ''
+    // let output2 = ''
+
+    // for(let i=5;i>=1;i--){
+    //   for(let j=1;j<=i;j++){
+    //     output1 += i
+    //   }
+    //   output1 += "<br>"
+    // }
+
+    // for(let i=1;i<=5;i++){
+    //   for(let j=5; j>=i;j--){
+    //     output2 += j
+    //   }
+    //   output2 += "<br>"
+    // }
+
+
+
+    // para1.innerHTML = output1
+    // para2.innerHTML = output2
+
+  </script>
+</body>
+</html>

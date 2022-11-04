@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="tabs.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="tabs">
+      <div class="tab">
+        <a href="" class="tb active">React</a>
+        <a href="" class="tb">Node</a>
+        <a href="" class="tb">NextJS</a>
+        <a href="" class="tb">RxJS</a>
+      </div>
+      <div class="content">
+        <div class="con active">
+          <h2>React</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ad odit! Aspernatur asperiores at tenetur, ipsa aperiam possimus, fugit, culpa quasi omnis ad necessitatibus commodi distinctio facere explicabo deserunt. Fuga!
+          Provident dignissimos odit maiores libero nam totam quia perferendis autem! Recusandae, blanditiis nostrum laborum sunt explicabo quod modi, totam hic consequatur, quos minima. Enim labore est voluptate cupiditate neque ipsa?</p>
+        </div>
+
+        <div class="con">
+          <h2>Node</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ad odit! Aspernatur asperiores at tenetur, ipsa aperiam possimus, fugit, culpa quasi omnis ad necessitatibus commodi distinctio facere explicabo deserunt. Fuga!
+          Provident dignissimos odit maiores libero nam totam quia perferendis autem! Recusandae, blanditiis nostrum laborum sunt explicabo quod modi, totam hic consequatur, quos minima. Enim labore est voluptate cupiditate neque ipsa?</p>
+        </div>
+
+        <div class="con">
+          <h2>NextJS</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ad odit! Aspernatur asperiores at tenetur, ipsa aperiam possimus, fugit, culpa quasi omnis ad necessitatibus commodi distinctio facere explicabo deserunt. Fuga!
+          Provident dignissimos odit maiores libero nam totam quia perferendis autem! Recusandae, blanditiis nostrum laborum sunt explicabo quod modi, totam hic consequatur, quos minima. Enim labore est voluptate cupiditate neque ipsa?</p>
+        </div>
+
+        <div class="con">
+          <h2>RxJS</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, ad odit! Aspernatur asperiores at tenetur, ipsa aperiam possimus, fugit, culpa quasi omnis ad necessitatibus commodi distinctio facere explicabo deserunt. Fuga!
+          Provident dignissimos odit maiores libero nam totam quia perferendis autem! Recusandae, blanditiis nostrum laborum sunt explicabo quod modi, totam hic consequatur, quos minima. Enim labore est voluptate cupiditate neque ipsa?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    let anchors = document.querySelectorAll(".tb")
+    anchors.forEach((a, index) => {
+      a.onclick = (e) => {
+        e.preventDefault();
+        // console.log(e)
+        anchors.forEach((a) => {
+          if(a.classList.contains("active"))
+            a.classList.remove("active")
+        })
+        a.classList.add("active")
+
+        let conDivs = document.querySelectorAll(".con")
+
+        conDivs.forEach((con) => {
+          if(con.classList.contains("active"))
+            con.classList.remove("active")
+        })
+        
+        conDivs[index].classList.add("active")
+
+
+
+
+
+      }
+    })
+  </script>
+
+</body>
+</html>

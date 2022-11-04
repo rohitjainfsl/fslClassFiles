@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread & Destructuring</title>
+</head>
+
+<body>
+  <p>Javascript is awesome</p>
+  <button>Start</button>
+  <button>Stop</button>
+
+  <script>
+
+    let para = document.querySelector("p")
+    let originalValue = para.innerHTML
+    let start = document.querySelector("button:first-of-type")
+    let stop = document.querySelector("button:last-of-type")
+    let x;
+
+    start.onclick = () => {
+      x = setInterval(() => {
+        let letters = para.innerHTML.split("")
+        console.log(letters)
+        let lastLetter = letters.pop()
+        letters.unshift(lastLetter)
+        para.innerHTML = letters.join("")
+      }, 1000)
+
+    }
+
+    stop.onclick = () => {
+      clearInterval(x)
+      para.innerHTML = originalValue
+    }
+
+
+
+    // SPREAD SYNTAX
+
+    // function sum(x,y,z) {
+    //   return x + y + z;
+    // }
+    // const numbers = [1, 2, 3];
+    // console.log(sum(...numbers));
+
+
+    // let obj = {
+    //   name: 'Rohit Jain',
+    //   profession: 'Trainer',
+    //   location: 'Jaipur'
+    // }
+
+    // console.log(obj["name"])
+
+    // console.log(obj.name)
+
+    // const obj1 = { foo: 'bar', x: 42, name: 'Rohit' };
+    // const obj2 = { hello: 'baz', y: 13, name: 'Sachin' };
+
+    // const obj3 = {...obj1, ...obj2, dummy: 'hello world'}
+
+    // console.log(obj3)
+
+
+
+    // const arr = [1,2,3,[4,5],6]
+
+    // const obj = {
+    //   ...arr
+    // }
+
+    // console.log(obj)
+
+    // let arr1 = [1,2,3,4]
+    // let arr2 = [...arr1]
+    // arr1[4] = 100
+    // console.log(arr2[4])
+
+
+
+    //DESTRUCTURING
+
+    // let c = []
+    // a[0] = 10
+    // a[1] = 11
+
+    // c[0,1] = [10,11]
+
+    // let a, b;
+    // a = 10;
+    // b = 20;
+
+    //REST OPERATOR
+
+    // let [a,b,...c] = [10,20,30,40,50,607,0]
+    // console.log(c[3])
+
+
+
+    // let f1 = 'Praveen'
+    // let f2 = 'Rajveer'
+    // let f3 = 'Jitendra'
+
+    // //Praveen, Rajveer and Jitendra are friends
+
+    // console.log(f1+", "+f2+" and "+f3+" are friends");
+
+    // // TEMPLATE LITERAL
+
+    // console.log(`${f1}, ${f2} and ${f3} are friends`);
+
+
+    // let a = 100;
+
+    // if(a%2 === 0){
+    //   console.log("even")
+    // }
+    // else
+    //   console.log("odd")
+
+    // console.log((a%2 === 0) ? "even" : "odd")
+
+
+
+    // createElement, appendChild, insertBefore, insertAdjacentElement, insertAdjacentHTML
+    // Object, object functions, DATE, MATH
+    // asynchronous programming
+    // PROMISES: pending, resolve, reject
+    // FETCH - get request, post request, JSON: Javascript Object Notation
+
+
+
+
+
+  </script>
+</body>
+
+</html>

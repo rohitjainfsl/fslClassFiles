@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input in Array</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text" placeholder="Write Your Friend's Name">
+    <button>Add To Array</button>
+    <button>Print Names</button>
+    <p></p>
+  </div>
+  <script>
+    let friends = [];
+    let first = document.querySelector("button:first-of-type")
+    let last = document.querySelector("button:last-of-type")
+    let randomOrder = ''
+    let inputsec = document.querySelector("input")
+    let counter = 0
+    let alreadyPrintedNames = []
+
+    first.onclick = () => {
+      friends.push(inputsec.value)
+      inputsec.value = ''
+      inputsec.focus()
+      console.log(friends)
+    }
+    last.onclick = () => {
+      let interval = setInterval(() => {
+        let randomValue = getARandomValue()
+        if (alreadyPrintedNames.length === friends.length){
+        document.querySelector("p").innerHTML = document.querySelector("p").innerHTML + friends[randomValue]
+        last.setAttribute("disabled", "disabled")
+        clearInterval(interval)
+      }
+      else {       
+        document.querySelector("p").innerHTML = document.querySelector("p").innerHTML + friends[randomValue] + ", "
+      }
+      }, 1000);
+    }
+    function getARandomValue() {
+      let random = Math.floor(Math.random() * friends.length)
+      // console.log(random)
+      if (alreadyPrintedNames.includes(random)) {
+        return getARandomValue()
+      }
+      else {
+        alreadyPrintedNames.push(random)
+        return random
+      }
+    }
+
+
+
+    // MDN
+    // createElement, appendChild, insertAdjacentHTML, insetAdjacentElement, insertBefore
+    // setTimeout, setInterval
+
+  </script>
+</body>
+
+</html>

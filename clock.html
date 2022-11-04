@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ticking Clock</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <p></p>
+  </div>
+
+  <script>
+    setInterval(() => {
+      let dt = new Date()
+
+      let date = dt.getDate()
+      let day = dt.getDay()
+      let hours = dt.getHours()
+      let minutes = dt.getMinutes()
+      let seconds = dt.getSeconds()
+      let month = dt.getMonth()
+      let year = dt.getFullYear()
+
+      let output = `${day}, ${date}-${month}-${year} ${hours}:${minutes}:${seconds}`;
+
+      document.querySelector("p").innerHTML = output
+    }, 1000)
+
+
+    // getTime()
+
+    // console.log(new Date().getTime())
+
+
+
+  </script>
+</body>
+
+</html>

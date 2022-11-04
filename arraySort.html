@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Sort with user input</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text" placeholder="Enter a number">
+    <button>Add to Array</button>
+    <button disabled>Sort Array</button>
+
+    <p></p>
+  </div>
+  <script>
+    let addButton = document.querySelector("button:first-of-type")
+    let sortButton = document.querySelector("button:last-of-type")
+    let arr = []
+    let counter = 1;
+
+
+    addButton.onclick = () => {
+      let input = document.querySelector("input")
+      if (input.value.length === 0) {
+        alert("Enter a number")
+      }
+      else {
+
+        if (Number(input.value) > 1000) {
+          alert("Number should be less than 1000")
+        }
+        else {
+          if (counter >= 5) {
+            arr.push(Number(input.value))
+            input.disabled = true
+            input.value = ""
+            addButton.disabled = true
+
+            sortButton.disabled = false
+          }
+          else {
+            arr.push(Number(input.value))
+            counter++
+            input.value = ""
+            input.focus()
+          }
+        }
+
+      }
+
+    }
+
+    sortButton.onclick = () => {
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] < arr[j]) {
+            let temp = arr[i]
+            arr[i] = arr[j]
+            arr[j] = temp
+          }
+        }
+      }
+      // console.log(arr)
+
+      document.querySelector('p').innerHTML = arr
+    }
+
+  </script>
+</body>
+
+</html>

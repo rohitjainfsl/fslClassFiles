@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+
+  </div>
+  <script>
+    // let arr1 = [1,2,3,4,5,7,9,10]
+    // let arr2 = [9,10,11,12,13,32,43,160]
+
+    // let output = []
+
+    // if(arr1.length === arr2.length){
+    //   for(let i=0;i<arr1.length;i++){
+    //     output.push(arr1[i] + arr2[arr2.length-1 - i])
+    //   }
+    // }
+    // else{
+    //   alert("Both arrays should have equal length")
+    // }
+    // console.log(output)
+
+    let names = ['Praveen', 'Jitendra', 'Praveen', 'Aditya', 'Kamlesh', 'Aditya', 'Rajat']
+
+    //Expected Output: ['Praveen', 'Jitendra', 'Aditya', 'Kamlesh', 'Rajat']
+
+    let output = []
+
+    for(let i=0;i<names.length;i++){
+      for(let j=i+1;j<names.length;j++){
+        if(names[i] === names[j]){
+          names.splice(j,1)
+        }
+      }
+      output.push(names[i])
+    }
+    console.log(output)
+
+
+    names.forEach((name, index) => {
+      names.forEach((n, i) => {
+        if(index !== i){
+          if(name === n){
+            names.splice(i, 1)
+          }
+        }       
+      })
+      output.push(name)
+    })
+
+    console.log(output)
+
+  </script>
+</body>
+</html>

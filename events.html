@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Events</title>
+  <style>
+    /* :first-of-type, :last-of-type, :first-child, :last-child */
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- <button>+</button>
+    <p>0</p>
+    <button>-</button> -->
+   
+    <!-- <textarea name="" id="" cols="30" rows="10"></textarea>
+    <p></p> -->
+
+    <input type="text" placeholder="First Number">
+    <input type="text" placeholder="Second Number">
+    <select name="" id="">
+      <option value="" selected disabled>Select Operation</option>
+      <option value="+">Add</option>
+      <option value="-">Subtract</option>
+      <option value="*">Multiply</option>
+      <option value="/">Divide</option>
+      <option value="%">Modulus</option>
+    </select>
+    <p></p>
+    
+  </div>
+  <script>
+
+    const select = document.querySelector("select");
+    const para = document.querySelector("p");
+    select.onchange = () => {
+      const input1 = Number(document.querySelector("input:first-of-type").value)
+      const input2 = Number(document.querySelector("input:last-of-type").value)
+      switch(select.value){
+        case "+":
+          para.innerHTML = input1+input2
+          break;
+        case "-":
+          para.innerHTML = input1-input2
+          break;
+        case "*":
+          para.innerHTML = input1*input2
+          break;
+        case "/":
+          para.innerHTML = input1/input2
+          break;
+        case "%":
+          para.innerHTML = input1%input2
+          break;
+        default:
+          para.innerHTML = "Wrong Input"
+      }
+    }
+    // JS considers all inputs as strings, 
+    //convert string to number before addition
+
+    //  document.querySelector("p").onmouseover = () => {
+    //   document.querySelector("p").style.color="red"
+    //  }
+
+    //  document.querySelector("p").onmouseout = () => {
+    //   document.querySelector("p").style.color="black"
+    //  }
+
+   document.querySelector("textarea").onkeyup = () => {
+    document.querySelector("textarea").setAttribute("maxlength", 100)
+    let remaining = 100 - document.querySelector("textarea").value.length
+    if(remaining > 20) document.querySelector("p").style.color = '#000'
+    else document.querySelector("p").style.color = '#f00'
+    document.querySelector("p").innerHTML = remaining
+   }
+
+    // document.querySelector("button:first-of-type").onclick = () => {
+    //   document.querySelector("p").innerHTML = Number(document.querySelector("p").innerHTML) +1
+    // }
+    // document.querySelector("button:last-of-type").onclick = () => {
+    //   document.querySelector("p").innerHTML = Number(document.querySelector("p").innerHTML) - 1
+    // }
+
+    //This will not work, because RHS is an executable statement, will execute on page load, not on button click
+    // document.querySelector("button").onclick = printName(); 
+
+    //This will work
+    // document.querySelector("button").onclick = printName;
+
+    // function (){
+    //   alert("Rohit Jain")
+    // }
+
+    
+    // document.querySelector("button").onclick = function(){
+    //   alert("Rohit Jain");
+    // }
+
+    //ARROW FUNCTION
+    // document.querySelector("button").onclick = () => {
+    //   alert("Rohit Jain");
+    // }
+
+
+
+
+  </script>
+</body>
+</html>

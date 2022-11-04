@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <button id="increament">Increment</button>
+    <p id="value">0</p>
+    <button id="decreament">Decrement</button>
+  </div>
+  <script>
+    var increament = document.getElementById('increament');
+    var decreament = document.getElementById('decreament');
+
+
+    increament.onclick = function () {
+      let temp = Number(document.getElementById('value').innerHTML);
+      if (temp < 20) {
+        temp++;
+        document.getElementById('value').innerHTML = temp;
+      }
+    }
+    decreament.onclick = function () {
+      let temp = Number(document.getElementById('value').innerHTML);
+      temp--;
+      document.getElementById('value').innerHTML = temp;
+    }
+
+  </script>
+</body>
+
+</html>
