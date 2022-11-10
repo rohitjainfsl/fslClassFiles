@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    form{
+      width: 300px;
+    }
+    a{
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-decoration: none;
+      color: #000;
+      border: 1px solid;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+    .parent{
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <!-- <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p>Fourth Paragraph</p>
+    <h2></h2>
+    <input type="text" placeholder="Enter a number between 1-4">
+    <button>Click Me</button> -->
+
+
+    <!-- <input type="text" placeholder="enter a name">
+    <button>Push to array</button>
+    <button>Print Names</button> -->
+
+
+    <form action="">
+      <input type="text" placeholder="Name"><br>
+      <input type="email" placeholder="Email"><br>
+      <div class="parent">
+        <input type="0" placeholder="Hobby"><br>
+        
+        <a href="">+</a>
+      </div>      
+      <input type="submit" value="Register">
+    </form>
+    
+
+  </div>
+  <script>
+
+    // let counter = 0
+    // let plus = document.querySelector("a")
+    // plus.onclick = function(e){
+    //   e.preventDefault();
+    //   console.log(e)
+    //   if(counter < 5){
+    //     let input = document.createElement("input") 
+    //     input.setAttribute("type", "text") 
+    //     input.setAttribute('placeholder','hobby')
+    //     document.querySelector(".parent").children[0].insertAdjacentElement('afterend', input)
+    //     counter++;
+    //     console.log(counter)
+    //   }
+    // }
+
+
+    // let push = document.querySelector("button:first-of-type")
+    // let printNames = document.querySelector("button:last-of-type")
+    // let input = document.querySelector("input")
+    // // let para = document.querySelector("p")
+    // let para = document.createElement("p") //<p></p>
+    // let names = []
+    // push.onclick = function(){
+    //   names.push(input.value)
+    //   console.log(names)
+    // }
+
+    // printNames.onclick = function(){
+    //   para.innerHTML = names.reverse().join("<br>")
+    //   document.querySelector("#wrapper").appendChild(para)
+    // }
+
+
+
+
+    // let button = document.querySelector('button')
+    // button.onclick= function(){
+    //   let pera = document.querySelector('p')
+    //   let heading = document.querySelector('h2')
+    //   heading.innerText = pera.innerHTML 
+    //   pera.innerText = ''
+    // }
+
+    // let button = document.querySelector('button')
+    
+
+    
+  </script>
+</body>
+</html>

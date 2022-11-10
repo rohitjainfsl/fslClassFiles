@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse Each Name in Array</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text" placeholder="Enter name">
+    <button>Add Me</button>
+
+    <button>Print Reverse</button>
+    <p></p>
+  </div>
+  <script>
+
+    let names = []
+    let btn1 = document.querySelector("button:first-of-type")
+    let btn2 = document.querySelector("button:last-of-type")
+    let input = document.querySelector("input")
+
+    btn1.onclick = function(){
+      names.push(input.value)
+      input.value = ""
+      input.focus()
+      console.log(names)
+    }
+
+    btn2.onclick = function () {
+      let reverseNames = names.reverse()
+
+      for (let i = 0; i < reverseNames.length; i++) {
+        document.write(reverseNames[i].split("").reverse().join("") + ", ")
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

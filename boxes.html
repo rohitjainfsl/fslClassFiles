@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boxes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="boxes.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="heading">
+        <h2>Heading <i class="fa-solid fa-plus"></i></h2>
+      </div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum debitis labore iusto explicabo deleniti quam perspiciatis alias. Unde consectetur fugiat sit, suscipit earum commodi quam pariatur eveniet omnis repudiandae iure.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quasi esse nesciunt magni cum adipisci ipsam! Sint, illo qui molestiae magnam dolor minima sequi incidunt facere ex animi harum dolorem?</p>
+        <a href="" class="toggle">Show</a>
+      </div>
+    </div>
+  </div>
+    <!--children, parentelement,nextelementsibling,previouselementsibling, -->
+
+  <script>
+    let anchor = document.querySelectorAll('a');
+    let plus = document.querySelectorAll(".box i")
+    for(let i=0; i<plus.length; i++){
+      plus[i].onclick = function(){
+        console.log(plus[i].parentElement.parentElement.nextElementSibling.children);
+        let children = plus[i].parentElement.parentElement.nextElementSibling.children;
+        children[0].style.display='none'
+        children[1].style.display='none'
+        children[2].style.display='block'
+      }
+    }
+     
+      for(let i=0;i<4;i++){
+
+        anchor[i].onclick = function(e){
+          e.preventDefault()
+         let parent =  anchor[i].parentElement.children
+         console.log(parent)
+         parent[0].style.display='block'
+        parent[1].style.display='block'
+        parent[2].style.display='none'
+
+
+        }
+      }
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

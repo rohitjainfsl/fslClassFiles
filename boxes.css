@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#wrapper{
+  display: flex;
+}
+.box{
+  border: 1px solid;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+.box a{display: none;}
+.box .heading h2{
+  display: flex;
+  justify-content: space-between;
+}
+.box .heading h2 i{cursor: pointer;}
