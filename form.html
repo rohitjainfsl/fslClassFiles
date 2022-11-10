@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- required, autofocus, autocomplete, novalidate, disabled, selected -->
+    <form autocomplete="off">
+      <label>Name</label> <input name="name" placeholder="Enter your name" type="text" required autofocus><br>
+      <label>Password</label> <input type="password" required><br>
+
+      <label>Email</label>
+      <input type="email" name="email"  placeholder="Enter your email" required><br>
+
+      <label>Age</label>
+      <input type="number" placeholder="Enter your age" min="10" max="100" step="4"><br>
+
+      <label>Color</label>
+      <input type="color"><br>
+
+      <label>Range</label>
+      <input type="range" min="10" max="100" step="2"><br>
+
+      <label>Time</label>
+      <input type="time"><br>
+
+      <label>DOB</label>
+      <input type="date"><br>
+
+      <input type="radio" name="g">Male
+      <input type="radio" name="g">Female
+      <input type="radio" name="g">Other <br>
+
+      <input type="checkbox" name="hobby">Reading
+      <input type="checkbox" name="hobby">Sleeping
+      <input type="checkbox" name="hobby">Eating
+      <input type="checkbox" name="hobby">Swimming <br>
+
+      <select multiple>
+        <option value="" disabled selected>Select Hometown</option>
+        <option value="jpr">Jaipur</option>
+        <option value="">Kota</option>
+        <option value="">Nagaur</option>
+        <option value="">Dausa</option>
+        <option value="">Jodhpur</option>
+        <option value="">Ajmer</option>
+      </select> <br>
+
+      <input type="text" placeholder="Enter your hometown" list="hometown">
+      <datalist id="hometown">
+        <option value="Jaipur">Jaipur</option>
+        <option value="Kota">Kota</option>
+        <option value="Nagaur">Nagaur</option>
+        <option value="Dausa">Dausa</option>
+        <option value="Jodhpur">Jodhpur</option>
+        <option value="Ajmer">Ajmer</option>
+      </datalist><br>
+
+      <textarea cols="45" rows="10"></textarea><br>
+      <input type="submit" value="Register">
+    </form>
+  </body>
+</html>

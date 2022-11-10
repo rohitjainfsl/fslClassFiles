@@ -1,0 +1,84 @@
+/* 
+  class & id: attributes to make any HTML tag unique
+  
+  One page, one class, multiple times
+  One page, one id, one time
+
+
+  One tag, maximum One id
+  One tag, as many classes
+
+*/
+
+
+
+/* h1{
+  color: red;
+}
+
+p{
+  color: green;
+}
+
+#red{
+  color: red;
+}
+
+.red{
+  color: red;
+} */
+
+
+/* RULE: 
+id > class > tag 
+
+LAST COMES FIRST
+
+*/
+
+
+
+/* p{
+  color: blue;
+}
+
+.p1{
+  color: yellow;
+} */
+
+
+/* p{
+  color: red;
+}
+p{
+  color: green;
+}
+p{
+  color: yellow;
+}
+p{
+  color: blue;
+} */
+
+/* .red{color: red;}
+
+.yellow{color: yellow;}
+.green{color: green;}
+.blue{color: blue;} */
+
+
+
+/* Background Properties:
+
+  background-color
+  background-image
+  background-repeat
+  background-attachment 
+  background-position
+  background-size
+
+  SHORTHAND: background
+*/
+
+/* Text Properties:
+color: Hexadecimal value  */
