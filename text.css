@@ -1,0 +1,49 @@
+/* .one{
+  color: blue;
+}
+.two{
+  color: pink;
+}
+.three{
+  color: green;
+}
+.four{
+  color: red;
+} */
+
+h2{
+  text-transform: capitalize;
+  text-align: center;  
+  text-decoration: underline;
+ 
+}
+img{
+  width:200px;
+}
+.cricket {
+  border-style: solid;
+}
+.kabaddi{
+  border-style:solid;
+  border-color: rgb(255, 240, 240);
+  border-width: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

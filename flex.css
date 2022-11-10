@@ -1,0 +1,16 @@
+/* Flex: is used to arrange 2 or more than 2 elements */
+
+/* flex-direction: row | column | row-reverse | column-reverse */
+/* justify-content: flex-start | flex-end | center | space-between | space-evenly | space-around
+align-items
+flex-wrap */
+
+#wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box{
+  width: 400px;
+  border: 1px solid;
+}

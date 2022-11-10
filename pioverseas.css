@@ -1,0 +1,116 @@
+/* Box Model: Everything in CSS is a box
+
+The dimension of that box = width+padding+border+margin
+
+After box-sizing: border-box:
+
+The dimension of that box = (width+padding+border)+margin */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  /* font-family: Poppins; */
+  font-family: 'Times New Roman', Times, serif;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+header .bottom{
+  background-color: #acaaaa;
+  display: flex;
+  justify-content: center;
+}
+header .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+#logo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.center, .right, .bottom ul{
+  display: flex;
+  align-items: center;
+}
+.right{
+  border-left: 1px solid grey;
+  padding-left: 10px;
+}
+.bottom ul a {
+  padding: 12px 30px;
+  display: inline-block;
+}
+.center a{
+  padding: 20px;
+}
+.green{
+  color:green;
+}
+
+
+.about{
+  padding: 64px 20px;
+}
+.tagline{
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.about h1{
+  padding: 10px 0;
+}
+.about p{
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.centered{
+  text-align: center;
+}
+.featured h1{
+  padding: 20px 0;
+}
+
+
+.features{
+  display: flex;
+  margin: 20px 0 40px 0;
+}
+
+.feature{
+  width: 23%;
+  margin: 0 20px;
+}
+.feature .top{
+  height: 200px;
+}
+.feature img{
+  width: 100%;
+  height: 100%;
+}
+.feature .bottom{
+  border: 1px solid #808080;
+  border-top: none;
+  padding: 15px;
+}
+.feature .bottom p{
+  font-size: 20px;
+  padding: 20px 0;
+}
+.feature .bottom a{
+  font-weight: bold;
+}
+
+.featured .centered a{
+  background-color: #147914;
+  color: #fff;
+  padding: 15px 20px;
+}

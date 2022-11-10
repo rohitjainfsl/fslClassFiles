@@ -1,0 +1,54 @@
+/* background-color
+background-image
+background-repeat: repeat | no-repeat | repeat-x | repeat-y
+background-attachment: scroll | fixed
+background-position
+background-size(CSS 3): px % | cover | contain
+ */
+
+
+
+/* color: white
+text-align
+text-decoration
+text-transform
+
+font-size */
+
+
+body{
+  /* background-color:greenyellow;
+  background-image: url(images/highrise.webp); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover; */
+
+  background:  url(images/highrise.webp) no-repeat fixed center / cover;      
+}
+
+p{
+  color: white;
+  text-align: justify;
+}
+h1{
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+/* ASSIGNMENT: 
+-Hexadecimal value(#ff0000)
+-RGB Value (rgb(255,0,0))
+-RGBA Value (rgba(255,0,0,0.5))
+
+height
+width
+
+What are fixed units & variable units (rem, em, vh, vw) */

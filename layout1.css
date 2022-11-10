@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+  background-color: #faa361;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 3rem;
+}
+header ul{
+  list-style: none;
+  display: flex;
+}
+header ul a{
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+header h1 span{
+  color: #fff;
+}
+
+.background{
+  background: url(images/highrise.webp) no-repeat scroll center / cover;
+  height: 300px;
+}
+
+.orangeSection{
+  background-color: #faa361;
+  position: relative;
+}
+
+.threeBoxes{
+  display: flex;
+  position: absolute;
+  top: -80px;
+}
+.box{
+  background-color: #fff;
+  width: 31%;
+  margin: 0 1%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.twoParts{
+  display: flex;
+  padding-top: 13rem;
+}
+.twoParts ul{
+  width: 20%;
+}
+.twoParts .threePara{
+  width: 80%;
+}
+.twoParts .threePara p{
+  padding: 0.5rem 0;
+}
+
+
+header ul li{
+  position: relative;
+  padding: 21px 0;
+}
+.submenu{
+  position: absolute;
+  flex-direction: column;
+  background-color: #faa361;
+  top: 60px;
+  width: 190px;
+  display: none;
+}
+.submenu li{
+  padding: 0.5rem 0;
+}
+.submenu li:hover{
+  background-color: #000;
+}
+.submenu li:hover a{
+  color: #fff;
+}
+.submenu .submenu2{
+  right: 100%;
+  top: 0px;
+  background-color: blue;
+}
+header ul li:hover > .submenu{
+  display: flex;
+}
+.nikki:hover a{
+  background-color: black;
+}
+.hello:hover a{
+  display: block;
+  background-color: coral;
+}
+.hello1{
+  flex-direction: column;
+  right: 100%;
+  /* display: none; */
+  color: brown;
+}

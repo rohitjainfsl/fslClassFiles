@@ -1,0 +1,59 @@
+/* class & ID both are used to make any HTML tag unique */
+
+/* 
+  One page, one ID, one time
+  One page, one class, as many times 
+*/
+
+/* class is denoted by .
+id is denoted by # */
+
+/* p{
+  color: red;
+}
+
+#nikky{
+  color:green;
+}
+
+.nikky{
+  color:pink;
+} */
+
+
+/* Priority (Specificity): */
+
+/* id > class > tag */
+
+/* LAST COMES FIRST */
+
+/* #nikky{
+  color: red;
+}
+p{
+  color: green;
+}
+.purple{
+  color: purple;
+} */
+
+/* .purple{
+  color: purple;
+}
+.purple{
+  color: purple;
+}
+.blue{
+  color: blue;
+}
+.green{
+  color: green;
+}
+.yellow{
+  color: yellow;
+} */
+
+
+div div p{
+  color: pink;
+}

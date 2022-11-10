@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: orange;
+  height: 70px;
+}
+
+header ul{
+  display: flex;
+  list-style-type: none;
+}
+header ul a{
+  text-decoration: none;
+  color: white;
+  padding: 26px 10px;
+  border-left: 2px solid white ;
+}
+header h1{
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+header h1 span{
+  color: white;
+}
+
+
+
+#background{
+  background: url(images/highrise.webp) no-repeat scroll center / cover;
+  height: 250px;
+}
+
+.orangeSection{
+  background: orange;
+}
+
+.threeBoxes, .twoParts{
+  display: flex;
+}
+.threeBoxes .box{
+  background: white;
+  margin: 0 15px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+.twoParts{
+  margin: 0 30px;
+}
+.twoParts .left ul{
+  list-style-type: none;
+  margin-right: 32px;
+  border-right: 5px solid gray;
+   
+}
+.twoParts .right{
+  margin-top: 15px;
+
+}
+.twoParts .right p{
+  margin: 10px;
+  
+}
+.twoParts .left ul li{
+  background-color: white;
+  margin:20px 0px;
+  padding: 5px;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+   margin-right: 20px;
+} 
+.details .detail .heading{
+  background: url(/images/slider2.jpg) no-repeat fixed center / cover ;
+  padding: 10px;
+
+}
+.detail .heading h1{
+  text-align: center;
+  margin: 10px;
+  color:#fff;
+  
+}
+
+.detail .content{
+  padding: 20px;
+}
+
+.detail .content p{
+  padding: 10px 0;
+}
+
