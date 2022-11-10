@@ -20,23 +20,23 @@
     </div>
     <div class="content">
       <div class="con active" id="html">
-        <h2>Heading 1</h2>
+        <h2>HTML</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos odio quos neque laborum iste vero praesentium, quis molestias. Voluptatibus fugit eveniet sed voluptatum totam dicta quia minus voluptas numquam?</p>
       </div>
       <div class="con" id="css">
-        <h2>Heading 2</h2>
+        <h2>CSS</h2>
         <p>Placeat quae eaque doloribus. Fugiat nisi accusantium voluptatum voluptates nam eos eius est, optio, maiores, error quas modi aperiam alias? Voluptatum aspernatur sit, similique numquam debitis vero corrupti ad est?</p>
       </div>
       <div class="con" id="js">
-        <h2>Heading 3</h2>
+        <h2>JS</h2>
         <p>Nesciunt, repellat. Ipsa, iure distinctio amet voluptatibus eos, veniam veritatis vero obcaecati quibusdam quisquam itaque. Illum fugit ad, dolore consectetur asperiores aperiam recusandae, ab ullam nemo vitae quia harum? At?</p>
       </div>
       <div class="con" id="node">
-        <h2>Heading 4</h2>
+        <h2>Node</h2>
         <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
       </div>
       <div class="con" id="react">
-        <h2>Heading 5</h2>
+        <h2>React</h2>
         <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
       </div>
     </div>
@@ -88,8 +88,26 @@
           }
         }
         anchors[i].classList.add("active")
-      }
 
+
+        let text = anchors[i].innerHTML.toLowerCase()
+
+        let conDivs = document.querySelectorAll(".con")
+
+        for(let i=0;i<conDivs.length;i++){
+          if(conDivs[i].classList.contains("active")){
+            conDivs[i].classList.remove("active")
+          }
+        }
+
+        for(let i=0;i<conDivs.length;i++){
+          if(conDivs[i].id === text){
+            conDivs[i].classList.add("active")
+          }
+        }
+
+
+      }
     }
 
 
