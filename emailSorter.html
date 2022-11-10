@@ -5,10 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Email Extractor</title>
+  <style>
+    #wrapper{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    input{
+      width: 250px;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      margin-bottom: 0.5rem;
+      border: 2px solid #454545;
+    }
+    button{
+      width: 100px;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      border: 2px solid #454545;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+    p{
+      margin: 1rem 0;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
   <div id="wrapper">
-    <input type="text" placeholder="Type a valid email">
+    <input type="text" placeholder="Type a valid email" autofocus>
     <button>Get Domain</button>
     <p></p>
   </div>
@@ -19,11 +47,11 @@
 
     // let email = "ghanshyam.jangid.609@gmail.com"
 
-    // btn.onclick = function(){
-    //   let a = inp.value.indexOf("@") // 16
-    //   let b = inp.value.lastIndexOf(".")  // 22 
-    //   para.innerHTML = inp.value.slice(a + 1, b)
-    // }
+    btn.onclick = function(){
+      let a = inp.value.indexOf("@") // 16
+      let b = inp.value.lastIndexOf(".")  // 22 
+      para.innerHTML = inp.value.slice(a + 1, b)
+    }
 
     // console.log(email.indexOf(".", email.indexOf(".") + 1))
     
