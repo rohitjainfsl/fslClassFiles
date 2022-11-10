@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let arr = [
+      [1,2,3,4,0],
+      [4,5,6,5,0],
+      [7,8,9,6,0],
+      [7,8,9,6,0],
+      [7,8,9,6,0]
+    ]
+    let j = arr.length - 1, a = 0, b = 0;
+
+    for(let i=0;i<=arr.length - 1;i++){
+      a += arr[i][i];
+      b += arr[i][j];
+      j--
+    }
+    console.log(a)
+    console.log(b)
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using Fetch</title>
+  <style>
+    #wrapper{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .product{
+      width: 31%;
+      margin: 1%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+
+  </div>
+  <script>
+    // fetch("https://dummyjson.com/products")
+    // .then((response) => {return response.json()})
+    // .then((result) => {console.log(result)})    
+    // .catch((error) => {console.log(error)})
+
+
+
+    async function fetchData() {
+      const data = await fetch("https://dummyjson.com/products")
+      const result = await data.json()
+      const product = result.products
+      console.log(product)
+
+      product.map((img) => {
+
+          let parentDiv = document.createElement("div")
+          parentDiv.classList.add("product")
+      
+          let thumb = document.createElement("img")
+          thumb.setAttribute("src", img.thumbnail)
+          parentDiv.appendChild(thumb)
+
+          document.querySelector("#wrapper").appendChild(parentDiv)
+        
+      })
+
+    }
+    fetchData()
+
+
+    // function resolveAfter2Seconds() {
+    //   return new Promise(resolve => {
+    //     setTimeout(() => {
+    //       resolve('resolved');
+    //     }, 2000);
+    //   },
+    //   reject => {
+    //     reject('Not Working')
+    //   });
+    // }
+
+
+    // async function asyncCall() {
+    //   console.log('calling');
+    //   const result = await resolveAfter2Seconds();
+    //   console.log(result);
+    //   // expected output: "resolved"
+    // }
+
+    // asyncCall()
+
+
+
+  </script>
+</body>
+
+</html>
