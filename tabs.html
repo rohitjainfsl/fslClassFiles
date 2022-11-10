@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,41 @@
   <link rel="stylesheet" href="tabs.css">
   <title>Tabs</title>
 </head>
+
 <body>
   <div id="wrapper">
-    <a href="" class="active">HTML</a>
-    <a href="">CSS</a>
-    <a href="">JS</a>
-    <a href="">Node</a>
-    <a href="">React</a>
+    <div class="tabs">
+      <a href="" class="active">HTML</a>
+      <a href="">CSS</a>
+      <a href="">JS</a>
+      <a href="">Node</a>
+      <a href="">React</a>
+    </div>
+    <div class="content">
+      <div class="con active" id="html">
+        <h2>Heading 1</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum dignissimos odio quos neque laborum iste vero praesentium, quis molestias. Voluptatibus fugit eveniet sed voluptatum totam dicta quia minus voluptas numquam?</p>
+      </div>
+      <div class="con" id="css">
+        <h2>Heading 2</h2>
+        <p>Placeat quae eaque doloribus. Fugiat nisi accusantium voluptatum voluptates nam eos eius est, optio, maiores, error quas modi aperiam alias? Voluptatum aspernatur sit, similique numquam debitis vero corrupti ad est?</p>
+      </div>
+      <div class="con" id="js">
+        <h2>Heading 3</h2>
+        <p>Nesciunt, repellat. Ipsa, iure distinctio amet voluptatibus eos, veniam veritatis vero obcaecati quibusdam quisquam itaque. Illum fugit ad, dolore consectetur asperiores aperiam recusandae, ab ullam nemo vitae quia harum? At?</p>
+      </div>
+      <div class="con" id="node">
+        <h2>Heading 4</h2>
+        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
+      </div>
+      <div class="con" id="react">
+        <h2>Heading 5</h2>
+        <p>Obcaecati, iste consequuntur eos rerum exercitationem ipsam numquam modi reprehenderit totam, quia velit architecto id ab earum quo. Velit perferendis error veritatis molestiae corrupti? Itaque, consequuntur possimus. Veniam, placeat nulla!</p>
+      </div>
+    </div>
 
   </div>
-  <p class="hello"></p>
+
 
 
   <script>
@@ -27,7 +53,7 @@
     // let js = document.querySelector("a:nth-of-type(3)");
     // let node = document.querySelector("a:nth-of-type(4)");
     // let react = document.querySelector("a:nth-of-type(5)");
-    
+
 
     // let html = document.querySelectorAll("a")[0];
     // let css = document.querySelectorAll("a")[1];
@@ -35,7 +61,7 @@
     // let node= document.querySelectorAll("a")[3];
     // let react = document.querySelectorAll("a")[4];
 
-    
+
 
     // html.onclick = function(){}
     // css.onclick = function(){}
@@ -44,20 +70,20 @@
     // react.onclick = function(){}
 
     // console.log(anchors)
-    
+
     // for(let i=0;i<anchors.length;i++){
-      //   anchors[i].onclick = function(e){
-        //     e.preventDefault();
-        //     document.querySelector("p").innerHTML = anchors[i].innerText
-        //   }
-        // }
+    //   anchors[i].onclick = function(e){
+    //     e.preventDefault();
+    //     document.querySelector("p").innerHTML = anchors[i].innerText
+    //   }
+    // }
     let anchors = document.querySelectorAll("a")
 
-    for(let i = 0; i<anchors.length; i++){
-      anchors[i].onclick = function(e){
+    for (let i = 0; i < anchors.length; i++) {
+      anchors[i].onclick = function (e) {
         e.preventDefault();
-        for(let j=0; j<anchors.length; j++){
-          if(anchors[j].classList.contains("active")){
+        for (let j = 0; j < anchors.length; j++) {
+          if (anchors[j].classList.contains("active")) {
             anchors[j].classList.remove("active")
           }
         }
@@ -70,4 +96,5 @@
 
   </script>
 </body>
+
 </html>
