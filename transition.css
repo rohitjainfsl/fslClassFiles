@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* transition-property
+transition-duration
+transition-delay
+transition-timing-function: ease | ease-in | ease-in-out | linear | ease-out */
+
+
+.box{
+  width: 130px;
+  height: 130px;
+  background-color: #3b5998;
+  border-radius: 1rem;
+  margin: 2rem;
+  transition-property: all;
+  transition-duration: 2s;
+  /* transition-delay: 2s; */
+  transition-timing-function: linear;
+  position: absolute;
+}
+
+.box:hover{
+  width: 260px;
+  height: 260px;
+  transform: rotate(360deg) translate(70px,70px);
+  border-radius: 50%;
+  background-color: red;
+}

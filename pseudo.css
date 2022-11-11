@@ -1,0 +1,63 @@
+/* li{
+  color: #f00;
+}
+ */
+
+/* :first-of-type, :last-of-type, :first-child, :last-child, :nth-child, :nth-of-type
+
+:hover, :focus,
+
+:first-line, :first-letter */
+
+/* :has, :is, :not */
+
+
+/* li:first-of-type{
+  color: pink;
+}
+li:last-of-type{
+  color: pink;
+} */
+
+/* li:nth-child(4){
+  color: red;
+} */
+
+/* ul:first-of-type li:nth-of-type(4){
+  font-size: 4rem;
+} */
+
+/* ul:nth-of-type(2) li:nth-of-type(4) a{
+  text-decoration: none;
+} */
+
+
+/* EVEN */
+/* ul:nth-child(2) li:nth-of-type(2n) a{
+  text-decoration: none;
+} */
+
+
+/* ODD */
+/* ul:nth-child(2) li:nth-of-type(2n+1) a{
+  text-decoration: none;
+} */
+
+
+/* THIS WILL NOT WORK */
+/* ul:nth-child(2) li a:nth-of-type(2n+1){
+  text-decoration: none;
+} */
+
+
+ul:nth-of-type(2) li::first-letter{
+  font-size: 5rem;
+}
+
+
+
+/* 
+  ASSIGNMENT: what are pesudo elements?
+  what are :has, :is, :not 
+  What are ::before & ::after
+*/
