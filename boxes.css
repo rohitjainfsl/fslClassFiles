@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 #wrapper{
   display: flex;
@@ -10,10 +11,24 @@
   border: 1px solid;
   padding: 0.5rem;
   margin: 0.5rem;
+  width: 24%;
 }
 .box a{display: none;}
+.box .heading{
+  margin-bottom: 1rem;
+}
 .box .heading h2{
   display: flex;
   justify-content: space-between;
 }
-.box .heading h2 i{cursor: pointer;}
+.box .heading h2 i{
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.box .content img{
+  width: 100%;
+}
+.box .content p{
+  text-align: justify;
+  padding: 0.25rem 0;
+}

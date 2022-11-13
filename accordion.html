@@ -50,12 +50,14 @@
       plus.onclick = () => {
         let para = plus.parentElement.nextElementSibling
         if (para.classList.contains("active")) {
+          //Para OPEN h
           para.classList.remove("active")
 
           plus.classList.remove("fa-square-minus")
           plus.classList.add("fa-square-plus")
         }
         else {
+          //Para CLOSE h
           para.classList.add("active")
 
           plus.classList.remove("fa-square-plus")
