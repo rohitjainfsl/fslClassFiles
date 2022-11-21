@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Objects</title>
+</head>
+<body>
+  <div id="wrapper">
+
+  </div>
+  <script>
+    // Objecs: are collection of name-value (also known as key-value) pairs
+
+    // Two ways to create an object:
+    // - object literal
+    // - Object.create
+
+    // let obj = {
+    //   name: 'Rohit',
+    //   age: 32,
+    //   profession: 'Trainer'
+    // }
+
+    // let obj = Object.create(null)
+    // obj.name = 'Rohit';
+    // obj.age = 32;
+    // obj.profession = 'Trainer';
+    // console.log(obj)
+
+
+    // let obj = {
+    //   name: 'Rohit',
+    //   age: 32,
+    //   profession: 'Trainer',
+    //   techStack: ['HTML', 'CSS','JS', 'React', 'Node']
+    // }
+
+    // document.write(obj)
+
+    // document.write(obj.age) //dot notation
+
+    // document.write(obj['techStack']) //array notation
+
+    
+    // for(let i=0;i<obj.length)
+
+    // for(let x in obj){
+    //   // document.write(x + " : " + obj[x] + "<br>")
+
+    //   document.write(`${x} : ${obj[x]} <br>`)
+    // }
+
+    let obj = {
+      name: 'Rohit',
+      age: 32,
+      profession: 'Trainer',
+      techStack: ['HTML', 'CSS','JS', 'React', 'Node'],
+      Trainer: false
+    }
+
+    let arr = Object.keys(obj)
+    // console.log(arr[3])
+    console.log(arr[3] + ":" + obj[arr[3]])
+
+    // let profession = 'Trainer'
+
+    // document.write(obj['profession'])
+    // document.write(obj[profession])
+    
+
+    // let obj2 = obj; //Shallow copy
+
+    // for(let x in obj2){
+    //   document.write(`${x} : ${obj[x]} <br>`)
+    // }
+
+    // obj2.name = 'Praveen'
+
+    // console.log(obj.name)
+
+
+
+    // let obj2 = {...obj} //DEEP COPY
+
+    // obj.name = 'Praveen'
+
+    // console.log(obj2.name)
+
+
+    // let obj2 = Object.create(obj)
+
+    // obj2.name = 'Praveen'
+
+    // console.log(obj.name)
+
+
+    //To create a deep copy of an object
+    //first create a JSON string,
+    //convert it into an object, and store in a new variable
+
+    console.log(obj)
+    // let str = JSON.stringify(obj)
+    // let obj2 = JSON.parse(str)
+
+    // let obj2 = JSON.parse(JSON.stringify(obj))
+
+    // console.log(obj2)
+
+    // obj2.name = 'Vinay'
+
+    // console.log(obj.name)
+
+
+    // console.log(Object.keys(obj))
+
+    // let fn = 'name'
+
+    // console.log(Object.hasOwn(obj, 'fn'))
+
+
+    let input = ["Argentina", 'Afghanistan', 'bangladesh', 'Bhutan', 'China', 'Chile', 'Denmark', 'Dubai']
+
+    output = {
+      a: ['Argentina', 'Afghanistan'],
+      b: ['Bangladesh', 'Bhutan'],
+      c: ['China', 'Chile'],
+      d: ['Denmark', 'Dubai']
+    }
+
+    // *
+    // **
+    // ***
+    // ****
+    // *****
+
+    
+
+
+  </script>
+</body>
+</html>
