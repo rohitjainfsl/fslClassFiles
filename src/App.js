@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// export const name = "Ramraj";
+// export const profession = "Developer";
+ 
+// export const App = "Vishal";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// export function sum(a, b) {
+//   console.log(a + b);
+// }
+
+// props: built-in object in React, which recieves all the arguments passed to any functional componenent in react
+
+
+// export function Friends(props){
+//     return <h2>{props.f1} and {props.f2} are friends</h2>
+// }
+
+export function Friends({f1,f2}){
+    return <h2>{f1} and {f2} are friends</h2>
 }
-
-export default App;
+// Consolas, 'Courier New', monospace

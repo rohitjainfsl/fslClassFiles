@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Friends } from "./App";
+// import {name, profession, sum} from './App'
+// import * as App from './App'-----
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+// JSX: Javasript Expressions: combination of HTML, JS and XML
+
+const name1 = "sanjay";
+const name2 = "omi";
+
+const root = ReactDOM.createRoot(document.querySelector("#wrapper"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div id="d1">
+    <Friends f1={name1} f2={name2}/>
+  </div>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
