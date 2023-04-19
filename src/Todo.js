@@ -16,11 +16,16 @@ function Todo() {
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    //check whether we are adding or editing
     if (editing !== false) {
+      //Put value at the specific index in the array
       inputValues[editing] = inputValue;
+      //Reset the editing variable
       setEditing(false);
     } else setInputvalues([...inputValues, inputValue]);
 
+    //Clear the input box
     setInputvalue("");
   }
 
@@ -34,7 +39,10 @@ function Todo() {
   }
   function handleEdit(e, index) {
     e.preventDefault();
+    //This will put the value in the input box
     setInputvalue(inputValues[index]);
+
+    //This will tell form that we are editing a value, not adding new value
     setEditing(index);
   }
   return (
