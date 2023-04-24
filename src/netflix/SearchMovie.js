@@ -36,7 +36,6 @@ function SearchMovie() {
         `https://api.themoviedb.org/3/search/movie?api_key=8125db8f67d23da1d30f6063b1b794b8&language=en-US&query=${input}&page=1&include_adult=false'`
       )
       .then((results) => {
-        console.log(results.data.results);
         setMoviesArray(results.data.results);
       });
   }
