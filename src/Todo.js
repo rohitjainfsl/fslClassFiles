@@ -1,12 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import "./todo.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import CheckIcon from "@mui/icons-material/Check";
 
 function Todo() {
   const [inputValue, setInputvalue] = useState("");
   const [inputValues, setInputvalues] = useState([]);
   const [editing, setEditing] = useState(false);
+  const [completed, setCompleted] = useState([]);
 
   //Events are passed implicitly in react to event handlers
 
@@ -16,14 +19,11 @@ function Todo() {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    //check whether we are adding or editing
-    if (editing !== false) {
-      //Put value at the specific index in the array
+    if (editing === false) setInputvalues([...inputValues, inputValue]);
+    else {
       inputValues[editing] = inputValue;
-      //Reset the editing variable
       setEditing(false);
-    } else setInputvalues([...inputValues, inputValue]);
+    }
 
     //Clear the input box
     setInputvalue("");
@@ -37,14 +37,18 @@ function Todo() {
       })
     );
   }
+
   function handleEdit(e, index) {
     e.preventDefault();
-    //This will put the value in the input box
     setInputvalue(inputValues[index]);
-
-    //This will tell form that we are editing a value, not adding new value
     setEditing(index);
   }
+
+  function handleCompleted(e, index) {
+    e.preventDefault();
+    setCompleted([...completed, index]);
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -60,18 +64,16 @@ function Todo() {
         {inputValues.map((task, index) => {
           // return <li><a href="" onClick={handleDelete}>{task} <DeleteIcon /></a></li>
           return (
-            <li>
+            <li className = {completed.includes(index) ? "completed" : ""} key={index}>
               {task}
               <a href="" onClick={(e) => handleDelete(e, index)}>
                 <DeleteIcon />
               </a>
-              <a
-                href=""
-                onClick={(e) => {
-                  handleEdit(e, index);
-                }}
-              >
+              <a href="" onClick={(e) => handleEdit(e, index)}>
                 <EditIcon />
+              </a>
+              <a href="" onClick={(e) => handleCompleted(e, index)}>
+                <CheckIcon />
               </a>
             </li>
           );
