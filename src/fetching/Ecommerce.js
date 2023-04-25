@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Ecommerce() {
@@ -22,11 +22,15 @@ function Ecommerce() {
 
   const [products, setProducts] = useState([]);
 
-  function getEcommerceData() {
-    return axios.get("https://fakestoreapi.com/products").then((result) => {
+  //This code is running infinite times
+  //To make it run exactly once, we use useEffect
+
+  useEffect(() => {
+    axios.get("https://fakestoreapi.com/products").then((result) => {
+      console.log(result.data);
       setProducts(result.data);
     });
-  }
+  }, []);
 
   function trimDescription(desc) {
     return desc.length > 100 ? desc.slice(0, 100) + "..." : desc;
@@ -34,7 +38,6 @@ function Ecommerce() {
 
   return (
     <>
-      <button onClick={getEcommerceData}>Get Ecommerce Data</button>
       <div className="products" style={productsStyle}>
         {products.map((product, index) => {
           return (

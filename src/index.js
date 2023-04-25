@@ -1,27 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import { Counter } from "./Counter";
-// import './counter.css'
-
-// import Todo from "./Todo";
-
-// import RandomData from './fetching/RandomData'
-// import Ecommerce from "./fetching/Ecommerce";
-import SearchMovie from "./netflix/SearchMovie";
-
-// import {name, profession, sum} from './App'
-// import * as App from './App'-----
-
-// JSX: Javasript Expressions: combination of HTML, JS and XML
-
-
+import Home from "./netflix/Home";
 
 const root = ReactDOM.createRoot(document.querySelector("#wrapper"));
 root.render(
   <div id="d1">
-    {/* <Counter /> */}
-    {/* <RandomData /> */}
-    {/* <Ecommerce /> */}
-    <SearchMovie />
+    <Home />
   </div>
 );

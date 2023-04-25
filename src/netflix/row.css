@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    margin: 1rem;
+}
+.row .movies{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.row .movies::-webkit-scrollbar{
+    display: none;
+}
+.row .movies img{
+    width: 150px;
+    margin: 5px;
+}
