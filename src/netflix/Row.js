@@ -9,13 +9,13 @@ function Row(props) {
     useEffect(() => {
         axios.get(props.endpoint)
         .then((result) => {
-            console.log(result.data.results)
+            // console.log(result.data.results)
             setMovies(result.data.results)
         })
     }, [])
 
   return (
-    <div className='row'>
+    <div className= {props.isBigger ? "row bigger" : "row"}>
         <h1>{props.heading}</h1>
         <div className='movies'>
             {

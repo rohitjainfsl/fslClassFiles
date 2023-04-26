@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .row{
     margin: 1rem;
@@ -14,7 +15,10 @@
 .row .movies::-webkit-scrollbar{
     display: none;
 }
-.row .movies img{
+.row.bigger .movies img{
     width: 150px;
+}
+.row .movies img{
+    width: 100px;
     margin: 5px;
 }
